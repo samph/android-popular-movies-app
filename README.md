@@ -2,6 +2,11 @@
 
 Project 1 for the Developing Android Apps Udacity Course
 
+## Progress
+* 25/11/18 - Initial Screen and settings done, allowing for sorting by rating, most popular, or now playing.
+
+<img src="https://i.imgur.com/doXlDrm.png" width="200">
+
 ## Requirements
 
 Unfortunately the rubric for assessing this project is no longer online, so I've compiled a list of requirements from the notes and other repositories which make reference to them.
