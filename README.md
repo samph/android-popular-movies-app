@@ -58,4 +58,8 @@ Unfortunately the rubric for assessing this project is no longer online, so I've
 * App uses a share Intent to share URL.
 
 
+### Quality
+* App conforms to [Udacity Android Developer Nanodegree - Core App Quality Guidelines](http://udacity.github.io/android-nanodegree-guidelines/core.html)
+* App conforms to [Android - Core app quality](https://developer.android.com/docs/quality-guidelines/core-app-quality)
+* Tests!
 
