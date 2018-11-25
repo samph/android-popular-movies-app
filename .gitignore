@@ -9,3 +9,4 @@
 /build
 /captures
 .externalNativeBuild
+**/api_config.xml
