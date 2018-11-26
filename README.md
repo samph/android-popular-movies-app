@@ -7,6 +7,11 @@ Project 1 for the Developing Android Apps Udacity Course
 
 <img src="https://i.imgur.com/doXlDrm.png" width="200">
 
+* 26/11/18 - Added basic detail Activity.
+
+<img src="https://i.imgur.com/YjhHuxY.png" width="200">
+
+
 ## Requirements
 
 Unfortunately the rubric for assessing this project is no longer online, so I've compiled a list of requirements from the notes and other repositories which make reference to them.

@@ -43,6 +43,16 @@ public class Movies {
         return "";
     }
 
+    public Movie getMovieAtIndex(int index)
+    {
+        if (index < mMovies.size())
+        {
+            return mMovies.get(index);
+        }
+
+        return null;
+    }
+
     public Movie addMovieAtIndex(int index)
     {
         Movie m = null;

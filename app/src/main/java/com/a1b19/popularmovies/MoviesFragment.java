@@ -208,13 +208,15 @@ public class MoviesFragment extends Fragment {
         protected void onPostExecute(ArrayList<String> result) {
 
             GridView gridview = getActivity().findViewById(R.id.gridview_movies);
-            ArrayList<String> movies = new ArrayList<>();
 
             ImageAdapter movieAdaptor = new ImageAdapter(getActivity());
             gridview.setAdapter(movieAdaptor);
             gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView parent, View v, int position, long id) {
                     Toast.makeText(getActivity(),"" + position , Toast.LENGTH_SHORT).show();
+                    Intent detailIntent = new Intent(getActivity(), DetailActivity.class);
+                    detailIntent.putExtra("MOVIE", mMovies.getMovieAtIndex(position));
+                    startActivity(detailIntent);
                 }
             });
 

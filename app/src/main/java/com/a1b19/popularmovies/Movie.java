@@ -6,9 +6,27 @@ import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable {
     private String mTitle;
-    private Uri mPosterUri;
+    private String mPosterUrl;
+
+    public Double getRating() {
+        return mRating;
+    }
+
+    public String getOverview() {
+        return mOverview;
+    }
+
+    public String getReleaseDate() {
+        return mReleaseDate;
+    }
+
+    private Double mRating;
+    private String mOverview;
+    private String mReleaseDate;
 
     public Movie(JSONObject movieJSON, TMDBConfig config)
     {
@@ -17,12 +35,17 @@ public class Movie {
         {
             mTitle = movieJSON.getString("title");
             String filename = movieJSON.getString("poster_path");
-            mPosterUri = Uri.parse(config.getBaseURL())
+            mRating = movieJSON.getDouble("vote_average");
+            mOverview = movieJSON.getString("overview");
+            mReleaseDate = movieJSON.getString("release_date");
+
+            Uri posterUri = Uri.parse(config.getBaseURL())
                 .buildUpon()
                 .appendPath(config.getSmallestPosterSize())
                 .appendEncodedPath(filename)
                 .build();
-            Log.v(this.getClass().getSimpleName(), mPosterUri.toString());
+            mPosterUrl = posterUri.toString();
+            Log.v(this.getClass().getSimpleName(), posterUri.toString());
         }
         catch (JSONException e)
         {
@@ -44,6 +67,8 @@ public class Movie {
 
     public String posterURL()
     {
-        return mPosterUri.toString();
+        return mPosterUrl;
     }
+
+
 }
